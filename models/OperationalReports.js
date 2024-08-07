@@ -12,7 +12,13 @@ const report=new mongoose.Schema({
     tripEfficiency:{
         type:"string",
         required:"true"
-    }
+    },
+    complain:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"complianceReport"
+    
+    }]
 })
+
 const operationalReport=mongoose.model("operationalReport",report)
 module.exports=operationalReport

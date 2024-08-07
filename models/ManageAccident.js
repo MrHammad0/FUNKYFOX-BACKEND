@@ -28,7 +28,13 @@ driver:{
 expense:{
     type:"string",
     required:"true"
-}
+},
+Complain:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"complianceReport"}],
+   
+     
+    
 })
 
 const accidentReport=mongoose.model("accidentReport",accidentSchema)

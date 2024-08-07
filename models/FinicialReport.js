@@ -19,7 +19,13 @@ const finicialReportSchema=new  mongoose.Schema({
     taxes:{
         type:"string",
         required:"true"
-    }
+    },
+    expense:[{
+        type:mongoose.Schema.Types.ObjectId,
+         ref:"expensialReport"}]
+
+
+      
 })
 const financeReport=mongoose.model("financeReport",finicialReportSchema)
 module.exports=financeReport

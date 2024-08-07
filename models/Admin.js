@@ -15,7 +15,17 @@ email:{
 passward:{
     type:"string",
     required:"true"
-}
+},
+
+financeReport:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"financeReport"
+
+}],
+operationReport:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"operationalReport"
+}]
 
 })
 const admin=mongoose.model("admin",adminSchema)

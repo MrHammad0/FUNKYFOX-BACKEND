@@ -21,7 +21,8 @@ const maintainceActivitySchema=new mongoose.Schema({
     vehical:{
         type:"string",
         required:"string"
-    }
+    },
+    
 
 })
 const maintanceActivity=mongoose.model("maintanceActivity",maintainceActivitySchema)

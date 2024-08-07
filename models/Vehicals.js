@@ -18,7 +18,21 @@ const vehicalSchema=new mongoose.Schema({
     vehicalMilage:{
         type:"string",
         required:"true"
-    }
+    },
+    driver:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"driver"
+    
+    }],
+    ProfitLoss:[{
+        type:mongoose.Schema.Types.ObjectId,
+         ref:"profitLoss"}],
+         icomes :[{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"income"}]
+        
+
+
 
 })
 const vehical=mongoose.model("vehical",vehicalSchema)

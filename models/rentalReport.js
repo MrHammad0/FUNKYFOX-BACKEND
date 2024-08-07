@@ -18,10 +18,30 @@ const report=new mongoose.Schema({
         type:"string",
         required:"true"
     },
+    totalCost:{
+        type:"string",
+        required:"true"
+    },
+    dayRented:{
+        type:"string",
+        required:"true"
+    },
     endDate:{
         type:"string",
         required:"true"
-    }})
+    },
+
+    icomes :[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"income"
+    
+    }],
+    ProfitLoss:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"profitLoss"
+    
+    }]
+})
 
 const rentalReport=mongoose.model("rentalReport",report)
 module.exports=rentalReport
