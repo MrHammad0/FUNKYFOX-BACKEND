@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
 const report=new mongoose.Schema({
-    vehiclaId:{
+    vehicalId:{
         type:"string",
         required:"true"
     },

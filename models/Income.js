@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
-const vehical = require('./Vehicals')
+
 
 const incomeSchema=new mongoose.Schema({
 
@@ -20,17 +20,32 @@ const incomeSchema=new mongoose.Schema({
         type:"string",
         required:"true"
     },
-    plateNo: [{
-       
-    type:mongoose.Schema.Types.ObjectId,
-    ref:"vehical"
+    plateNo: {
+       type:"string",
+       required:"true"
             
        
-    } ],
+    } ,
 driverEmail:{
     type:"string",
-    required:"string"
+    required:"true"
 },
+rentalReport:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"rentalReport"
+
+}],
+ProfitLoss:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"profitLoss"
+
+}],
+finicialReport:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"financeReport"
+
+}]
+
 
     
 

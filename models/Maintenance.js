@@ -15,7 +15,10 @@ const maintainceSchema=new mongoose.Schema({
     vehicalPlate:{
         type:"string",
         required:"true"
-    }
+    },
+      maintainceActivity:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"maintanceActivity"}],
 
 })
 const manageMaintenance=mongoose.model("manageMaintenance",maintainceSchema)

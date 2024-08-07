@@ -21,7 +21,16 @@ required:"true"
     driverEmail:{
         type:"string",
         required:"true"
-    }
+    },
+    complain:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"complianceReport"
+    
+    }],
+    vehical:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"vehical"
+    }]
 })
 const TrafficFine=mongoose.model("TafficFine",fineSchema)
 module.exports=TrafficFine

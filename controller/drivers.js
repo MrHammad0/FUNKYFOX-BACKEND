@@ -1,4 +1,5 @@
 const driver=require('../models/Drivers')
+const vehical = require('../models/Vehicals')
 
 exports.driverInfo=async(req,res)=>{
     const{userName,email,licenseNumber, phoneNo, adress,dateOfBirth, hireDate, additionalNote}=req.body
@@ -16,6 +17,7 @@ exports.driverInfo=async(req,res)=>{
         //plateno
     })
     await drivers.save()
+    
     res.status(200).json({mesg:"information saved successfully",drivers})
  } catch (error) {
     res.status(505).json({mesg:"internal server error",err:error.message})

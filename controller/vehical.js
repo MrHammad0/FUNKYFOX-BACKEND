@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken")
 exports.vehicalCreate=async(req,res)=>{
     const{vehicalName,vehicalModel,vehicalPlate,vehicalMilage}=req.body
     const existVehicle = await vehical.find({vehicalPlate})
-    if(existVehicle){
+    if(!existVehicle){
         res.status(401).json({success:false,message:"vehhicle already exsist"})
     }
     try {
